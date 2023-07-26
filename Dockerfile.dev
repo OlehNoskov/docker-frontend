@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-#fixed permission denied, mkdir '/app/node_modules/.cache'
+#Fixed permission denied, mkdir '/app/node_modules/.cache'
 RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
 
 COPY . ./
